@@ -15,13 +15,16 @@ exports.register = async (req, res) => {
   try {
     const { name, email, password } = req.body;
 
+    // Check if user exists
     const exists = await User.findOne({ email });
     if (exists) {
       return res.status(400).json({ message: "User already exists" });
     }
 
+    // Hash password
     const hashedPassword = await bcrypt.hash(password, 10);
 
+    // Create user
     const user = await User.create({
       name,
       email,
@@ -30,28 +33,40 @@ exports.register = async (req, res) => {
 
     res.json({ success: true, message: "Account created" });
   } catch (err) {
+    console.error("Register Error:", err);
     res.status(500).json({ message: "Server error" });
   }
 };
 
-// LOGIN (email OR name)
+// LOGIN (Fixed to accept 'email' OR 'identifier')
 exports.login = async (req, res) => {
   try {
-    const { identifier, password } = req.body;
+    // FIX: Look for email OR identifier
+    const { email, identifier, password } = req.body;
+    const loginKey = email || identifier; 
 
+    if (!loginKey || !password) {
+        return res.status(400).json({ message: "Email and Password are required" });
+    }
+
+    // Find user by Email OR Name
     const user = await User.findOne({
-      $or: [{ email: identifier }, { name: identifier }]
+      $or: [{ email: loginKey }, { name: loginKey }]
     });
 
     if (!user) {
+      console.log("❌ Login Failed: User not found for", loginKey);
       return res.status(401).json({ message: "Invalid credentials" });
     }
 
+    // Check password
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
+      console.log("❌ Login Failed: Wrong password for", loginKey);
       return res.status(401).json({ message: "Invalid credentials" });
     }
 
+    // Generate Token
     const token = generateToken(user);
 
     res.json({
@@ -65,6 +80,7 @@ exports.login = async (req, res) => {
       }
     });
   } catch (err) {
+    console.error("❌ Server Login Error:", err);
     res.status(500).json({ message: "Server error" });
   }
 };

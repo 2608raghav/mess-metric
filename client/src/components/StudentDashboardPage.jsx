@@ -6,6 +6,7 @@ import { StatsOverview } from "./StudentDashboard/StatsOverview";
 import { CoinRedemptionCard } from "./StudentDashboard/CoinRedemptionCard";
 import { WeeklyRewardBadge } from "./StudentDashboard/WeeklyRewardBadge";
 import { DailyFoodReview } from "./StudentDashboard/DailyFoodReview";
+import AiWasteChart from './AiWasteChart';
 
 export function StudentDashboard() {
   const containerVariants = {
@@ -56,6 +57,10 @@ export function StudentDashboard() {
         <motion.div variants={itemVariants}>
           <CoinRedemptionCard />
         </motion.div>
+
+        <div className="mt-8 mb-8">
+          <AiWasteChart />
+        </div>
 
         <motion.div variants={itemVariants}>
           <WeeklyRewardBadge />
