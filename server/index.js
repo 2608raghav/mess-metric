@@ -8,7 +8,13 @@ const aiRoutes = require("./routes/ai.routes");
 // database
 const connectDB = require("./config/db");
 
+
+
+
 const app = express();
+
+// For connecting admin
+app.use("/api/admin/auth", require("./routes/admin.auth.routes"));
 
 // middleware
 app.use(cors({
