@@ -8,9 +8,6 @@ const aiRoutes = require("./routes/ai.routes");
 // database
 const connectDB = require("./config/db");
 
-
-
-
 const app = express();
 
 // For connecting admin
