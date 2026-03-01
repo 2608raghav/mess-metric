@@ -1,55 +1,45 @@
-# 🌿 Mess-Metric: Smart Food Sustainability Portal
+# 🌿 Mess-Metric: AI & Web3 Food Sustainability Portal
 
-![Mess Metric Banner](https://img.shields.io/badge/Status-Live-success?style=for-the-badge) ![Tech](https://img.shields.io/badge/Stack-MERN-blue?style=for-the-badge) ![AI](https://img.shields.io/badge/AI-Gemini_Powered-orange?style=for-the-badge)
+**Transforming campus dining with AI waste forecasting, smart procurement, and Web3-powered student rewards.**
 
-> **Transforming campus dining with AI-driven analytics, reducing food waste, and rewarding eco-conscious students.**
+🏆 **Hackathon Achievement:** Top 6 Finalist in our specific theme (Top 38 Out of ~137 Teams) in a month-long INNOVIT'26 Hackathon by Blockchain Club VITB!
 
-🌐 **Live Demo:** [https://mess-metric.vercel.app](https://mess-metric.vercel.app)
-
----
+🌐 **Live Demo:** https://mess-metric.vercel.app  
 
 ## 🚀 Overview
-
-**Mess-Metric** is a comprehensive solution designed to bridge the gap between students and mess management. By digitizing the feedback loop and gamifying food sustainability, we aim to drastically reduce food waste in college campuses.
-
-We use **Google Gemini AI** to analyze student feedback in real-time, categorizing reviews by sentiment and severity to give mess managers actionable insights instantly.
-
----
+Mess-Metric is a comprehensive, enterprise-grade solution designed to bridge the gap between students and mess management. By digitizing the feedback loop, predicting daily footfall with ML, and gamifying sustainability using blockchain technology, we aim to drastically reduce the thousands of kilograms of food wasted on college campuses every year.
 
 ## ✨ Key Features
 
-### 👨‍🎓 **For Students**
-* **AI-Powered Reviews:** Submit daily food reviews. Our AI automatically tags them (e.g., "Too Oily", "Spicy") and assigns a **Severity Score** (-1 to +1).
-* **Gamified Sustainability:** Earn **Mess Coins** for consistent reviews and "Zero Waste" streaks.
-* **Leaderboard:** Compete with peers to become the monthly "Green Champion".
-* **Menu & Rebates:** Check daily menus and apply for meal rebates instantly.
+### 👨‍🎓 For Students
+* **Web3 Reward Store:** Earn **MEAL Tokens** on the Polygon blockchain for skipping meals you won't eat. Spend them in our integrated store for real-world rewards (Cold Coffee, Extra Dessert) and instantly receive automated QR codes via email.
+* **Smart Meal Skipping:** Toggle your attendance for upcoming meals so the kitchen knows exactly how much to cook. Scans are verified via admin approval.
+* **AI-Powered Reviews:** Submit daily food reviews. Our Gemini AI automatically tags them by sentiment and assigns a Severity Score (-1 to +1).
+* **Gamified Sustainability:** Compete on the live Leaderboard to become the monthly "Green Champion."
 
-### 👨‍🍳 **For Admins/Managers**
-* **Live Analytics Dashboard:** Visualize feedback trends and waste data.
-* **Severity Alerts:** Instant highlighting of critical negative feedback (e.g., "Stale food").
-* **Inventory Tracking:** Monitor consumption patterns to optimize cooking quantities.
-
----
+### 👨‍🍳 For Admins/Managers
+* **AI Waste Forecaster:** Input expected attendance, day of the week, and special events to generate highly accurate ML predictions of expected food waste in kilograms.
+* **Smart Procurement Calculator:** Instantly calculate exact raw material requirements (Rice, Dal, Veggies) based on live student footfall data.
+* **Live Biometric Approvals:** A real-time dashboard to verify student skips and manually mint MEAL tokens directly to their Web3 wallets.
+* **Severity Alerts & Analytics:** Instantly highlight critical negative feedback and visualize weekly attendance trends.
 
 ## 🛠️ Tech Stack
 
 | Component | Technology |
 | :--- | :--- |
-| **Frontend** | React.js (Vite), Tailwind CSS, Framer Motion, Lucide React |
-| **Backend** | Node.js, Express.js |
-| **Database** | MongoDB Atlas |
-| **AI Engine** | Google Gemini API (Natural Language Processing) |
-| **Deployment** | Vercel (Client) + Render (Server) |
-
----
+| **Frontend** | React.js (Vite), Tailwind CSS, Framer Motion, Recharts |
+| **Backend** | Node.js, Express.js, Nodemailer (Automated Emails) |
+| **Database** | MongoDB Atlas, Mongoose |
+| **AI Engine** | Google Gemini API (NLP), Custom Python ML Model (Waste Prediction) |
+| **Web3 / Blockchain** | Polygon Amoy Testnet, Solidity Smart Contracts, Web3.js, MetaMask |
+| **Deployment** | Vercel (Frontend) + Render (Backend API) |
 
 ## ⚡ Quick Start (Run Locally)
 
-### 1. Clone the Repository
+**1. Clone the Repository**
 ```bash
 git clone [https://github.com/VITianYash42/mess-metric.git](https://github.com/VITianYash42/mess-metric.git)
-cd mess-metric
-```
+cd mess-metric 
 
 ### 2. Backend Setup
 ```bash
@@ -89,10 +79,10 @@ Don't want to sign up? Use our one-click **Demo Mode** on the Login page, or use
 
 ## 🤝 Contributors
 
-* **Yash Singhal** - AI Logic & Integration
-* **Aditya Mittal** - Frontend & UI/UX
-* **Raghav Gupta** - Backend Development and Blockchain
+* **Yash Singhal** - Project Architect, Full-Stack Integration, AI Logic, & Blockchain Development
+* **Aditya Mittal** - Frontend Architecture & UI/UX
+* **Raghav Gupta** - Backend API, Security, & Database Architecture
 
 ---
 
-Made with 💚 at **VIT Bhopal** for a greener future.
+Made with 💚 by **Cloud Chanakyas** for a greener future.
